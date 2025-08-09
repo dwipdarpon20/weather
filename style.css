@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* For Whole body  */
+body {
+    background: linear-gradient(180deg,  #66a6ff, #89f7fe); 
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 25px;
+}
+
+/* This is all the form */
+.weatherForm {
+    display: flex;
+    gap: 17px;
+    margin-bottom: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cityInput {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    min-width: 200px;
+    flex: 1;
+    background: rgba(255, 255, 255, 0.7); 
+    backdrop-filter: blur(8px); 
+    color: #373737; 
+    transition: all 0.4s ease;
+}
+
+.cityInput:hover,
+.cityInput:focus {
+    background: rgba(255, 255, 255, 0.85); 
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); 
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2); 
+}
+
+/* This is the button  */
+
+.weatherForm button {
+    padding: 10px 15px;
+    background: #ff7e5f;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.weatherForm button:hover {
+    background: #eb4d2d;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* This is for outer layer for card */
+.card {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(12px);
+    padding: 55px 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    color: #003366; 
+    text-align: center;
+    min-width: 260px;
+    max-width: 350px;
+    width: 100%;
+    transition: all 0.4s ease;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+}
+
+/* This is for text in the card */
+.cityDisplay {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.tempDisplay {
+    font-size: 2.5rem;
+    margin: 10px 0;
+}
+
+.humidityDisplay, 
+.descDisplay {
+    font-size: 1.1rem;
+    margin: 5px 0;
+}
+
+.weatherEmoji {
+    font-size: 4rem;
+    margin: 10px 0;
+}
+
+.errorDisplay {
+    margin-top: 10px;
+    color: #d9534f;
+    font-weight: bold;
+}
+
+/*  This is for responsive style */
+
+
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+    .cityDisplay {
+        font-size: 1.6rem;
+    }
+    .tempDisplay {
+        font-size: 2rem;
+    }
+    .weatherEmoji {
+        font-size: 3rem;
+    }
+    .card {
+        padding: 15px 20px;
+    }
+    .cityinput {
+        min-width: 150px;
+    }
+}
